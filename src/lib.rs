@@ -31,9 +31,7 @@ impl fmt::Display for Universe {
 }
 #[wasm_bindgen]
 impl Universe {
-    pub fn new() -> Universe {
-        let width = 64;
-        let height = 64;
+    pub fn new(width: u32, height: u32) -> Universe {
 
         let cells = (0..width * height)
             .map(|i| {
@@ -50,6 +48,17 @@ impl Universe {
             height,
             cells,
         }
+    }
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+
+    pub fn cells(&self) -> *const Cell {
+        self.cells.as_ptr()
     }
     /// Set the width of the universe.
     ///
