@@ -8,16 +8,13 @@
 ## Quickstart
 
 ### Run on localhost with npm
-</div>
-<div>
+
 ```
 wasm-pack build
 cd .\www\
 npm run build
 npm run start
 ```
-</div>
-<div align="center">
 ## License
 
 Licensed under the MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT).
