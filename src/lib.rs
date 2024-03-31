@@ -36,4 +36,14 @@ impl BoidField {
             self.buffer.push(boid.get_angle() / 360.0);
         }
     }
+    pub fn test(&mut self, boid_count: i32, prop_count: i32) -> Vec<f64> {
+        self.buffer.clear();
+        for i in 0..boid_count {
+            let flt = i as f64;
+            for _ in 0..prop_count {
+                self.buffer.push(flt);
+            }
+        }
+        self.buffer.clone()
+    }
 }

@@ -1,5 +1,6 @@
 use super::boid::Boid;
 
+#[derive(Clone)]
 pub struct Field {
     pub width: f64,
     pub height: f64,
